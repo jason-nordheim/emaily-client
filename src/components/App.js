@@ -1,6 +1,6 @@
 import { BrowserRouter, Route } from "react-router-dom";
+import Header from "./Header";
 
-const Header = () => <h1>Header</h1>;
 const Dashboard = () => <h1>Dashboard</h1>;
 const SurveyNew = () => <h1>Surveys New</h1>;
 //const Surveys = () => <h1>Surveys</h1>;
