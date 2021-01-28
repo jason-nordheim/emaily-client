@@ -1,13 +1,20 @@
 import { Component } from "materialize-css";
 import { BrowserRouter, Route } from "react-router-dom";
-import Header from "./Header";
 
+// redux
+import * as actions from "../actions";
+
+// components
+import Header from "./Header";
 const Dashboard = () => <h1>Dashboard</h1>;
 const SurveyNew = () => <h1>Surveys New</h1>;
 //const Surveys = () => <h1>Surveys</h1>;
 const Landing = () => <h1>Landing</h1>;
 
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchUser();
+  }
   render() {
     return (
       <div className="container">
@@ -24,4 +31,8 @@ class App extends Component {
   }
 }
 
-export default App;
+/**
+ * wrap the app component with react-redux's connect function
+ * and insert action creators (actions) as props
+ */
+export default import("react-redux").Connect(null, actions)(App);
