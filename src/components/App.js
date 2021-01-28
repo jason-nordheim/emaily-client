@@ -1,6 +1,6 @@
-import { Component } from "materialize-css";
+import { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-
+import { connect } from "react-redux";
 // redux
 import * as actions from "../actions";
 
@@ -35,4 +35,4 @@ class App extends Component {
  * wrap the app component with react-redux's connect function
  * and insert action creators (actions) as props
  */
-export default import("react-redux").Connect(null, actions)(App);
+export default connect(null, actions)(App);
