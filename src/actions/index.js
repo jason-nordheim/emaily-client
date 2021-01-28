@@ -7,12 +7,11 @@ export const fetchUser = () => {
    * the dispatch function is applied via reduxthunk
    * middleware
    */
-  return function (dispatch) {
-    axios.get("/api/current_user").then((res) =>
-      dispatch({
-        type: FETCH_USER,
-        payload: res,
-      })
-    );
+  return async (dispatch) => {
+    const res = await axios.get("/api/current_user");
+    dispatch({
+      type: FETCH_USER,
+      payload: res,
+    });
   };
 };
