@@ -3,6 +3,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 
+// css
+import "materialize-css/dist/css/materialize.min.css";
+
 // redux
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
