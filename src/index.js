@@ -6,10 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 // redux
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
+import reducers from "./reducers";
 
+// components
 import App from "./components/App";
 
-const store = createStore(() => [], {}, applyMiddleware()); // dummy store for the time being
+const store = createStore(reducers, {}, applyMiddleware()); // dummy store for the time being
 
 ReactDOM.render(
   <React.StrictMode>
