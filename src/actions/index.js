@@ -2,7 +2,7 @@ import axios from "axios";
 import { FETCH_USER } from "./types";
 
 /** Action Creator - Fetch User */
-const fetchUser = () => {
+export const fetchUser = () => {
   /**
    * the dispatch function is applied via reduxthunk
    * middleware
