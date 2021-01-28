@@ -10,11 +10,12 @@ import "materialize-css/dist/css/materialize.min.css";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import reducers from "./reducers";
+import reduxThunk from "redux-thunk";
 
 // components
 import App from "./components/App";
 
-const store = createStore(reducers, {}, applyMiddleware()); // dummy store for the time being
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk)); // dummy store for the time being
 
 ReactDOM.render(
   <React.StrictMode>
